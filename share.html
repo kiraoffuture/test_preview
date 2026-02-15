@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta property="og:title" content="Khám phá sản phẩm hot!" />
-    <meta property="og:description" content="Click để xem chi tiết" />
-    <meta property="og:image" content="https://cdn.example.com/images/preview.jpg" />
-    <meta property="og:url" content="https://yourdomain.vercel.app/share.html" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Open Graph metadata -->
+    <meta property="og:title" content="Xem hình này nhé!" />
+    <meta property="og:description" content="Nhấn để mở Google.com" />
+    <meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc9APxkj0xClmrU3PpMZglHQkx446nQPG6lA&s" />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourdomain.vercel.app/share.html" />
+
+    <!-- Twitter fallback -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://cdn.example.com/images/preview.jpg" />
-    <meta http-equiv="refresh" content="1; url=https://example.com/detail-page" />
+    <meta name="twitter:title" content="Xem hình này nhé!" />
+    <meta name="twitter:description" content="Nhấn để mở Google.com" />
+    <meta name="twitter:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc9APxkj0xClmrU3PpMZglHQkx446nQPG6lA&s" />
+
+    <!-- Redirect sau 1 giây -->
+    <meta http-equiv="refresh" content="1; url=https://google.com" />
+
+    <title>Redirecting...</title>
   </head>
-  <body>
-    <p>Đang chuyển hướng...</p>
+  <body style="font-family: sans-serif; text-align: center; padding-top: 50px;">
+    <p>Đang chuyển hướng đến <a href="https://google.com">Google.com</a>...</p>
+
+    <!-- JS fallback để đảm bảo redirect trên mọi trình duyệt -->
+    <script>
+      setTimeout(() => {
+        window.location.href = "https://google.com";
+      }, 1000);
+    </script>
   </body>
 </html>
